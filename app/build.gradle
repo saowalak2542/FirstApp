@@ -5,6 +5,9 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 29
     buildToolsVersion "30.0.1"
+    dataBinding {
+        enabled = true
+    }
 
     defaultConfig {
         applicationId "com.example.firstapp"
@@ -36,5 +39,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation"android.arch.navigation:navigation-fragment-ktx:$navigationVersion"
     implementation "android.arch.navigation:navigation-ui-ktx:$navigationVersion"
+    implementation "com.google.android.material:material:$supportlibVersion"
 
 }
