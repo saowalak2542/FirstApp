@@ -19,4 +19,22 @@
         android:name="com.example.firstapp.AboutFragment"
         android:label="About"
         tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.firstapp.fragments.list.ListFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/fragment_list">
+        <action
+            android:id="@+id/action_listFragment_to_addfragment"
+            app:destination="@id/addfragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addfragment"
+        android:name="com.example.firstapp.fragments.list.ListFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_addfragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
 </navigation>
